@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  
+  color: rgb(17, 1, 1);
+  background-color: #5b9fd6;    
+
+  ;
+  
+}
+
+.contenedor{
+width: 90%;
+height: 900px;
+max-width: 100%;
+margin: 20px auto;
+
+display:grid;
+grid-gap: 20px;
+grid-template-columns: repeat(3,1fr);
+grid-template-rows: repeat(10,auto);
+
+/*GRID AREAS*/
+grid-template-areas: "contenido contenidoa contenidob "
+                     "contenido contenidoa contenidob"
+                     "contenido contenidoa contenidob"
+                     "contenido contenidoa contenidob"
+                     "contenido contenidoa contenidob"
+                     "contenido contenidoa contenidob"
+
+                     "contenidoc contenidoc contenidod"
+                     "contenidoc contenidoc contenidod"
+                     "contenidoc contenidoc contenidod"
+
+                     "contenidoe contenidoe contenidoe ";
+}
+
+.contenedor > div,
+.contenedor .contenido,
+.contenedor .contenidoa,
+.contenedor .contenidob,
+.contenedor .contenidoc,
+.contenedor .contenidod,
+.contenedor .contenidoe
+{
+background: #fff;
+padding: 20px;
+border-radius: 4px;
+
+}
+
+
+.contenedor h1{
+  /*flexbox*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  text-align: center;
+}
+
+
+
+.contenedor .contenido {
+  background: #f3f3f3;
+  color: rgb(0, 0, 0);
+  grid-area: contenido;
+   
+}
+
+.contenedor .contenidoa {
+  background: #f3f3f3;
+  color: rgb(0, 0, 0);
+  grid-area: contenidoa;
+   
+}
+
+.contenedor .contenidob {
+  background: #f3f3f3;
+  color: rgb(0, 0, 0);
+  grid-area: contenidob;
+   
+}
+
+.contenedor .contenidoc {
+  background: #f3f3f3;
+  color: rgb(0, 0, 0);
+  grid-area: contenidoc;
+   
+}
+
+.contenedor .contenidod {
+  background: #f3f3f3;
+  color: rgb(0, 0, 0);
+  grid-area: contenidod;
+   
+}
+
+.contenedor .contenidoe {
+  background: #f3f3f3;
+  color: rgb(0, 0, 0);
+  grid-area: contenidoe;
+   
+}
+
+
+/*media querys responsive*/
+@media screen and (max-width: 768px) {
+  body{
+    background: #69147e;
+  }
+
+ .contenedor{
+  grid-template-areas:
+  "contenido contenido contenidoa "
+  "contenidob contenidob contenidob "
+  "contenidoc contenidoc contenidod "
+  "contenidoe contenidoe contenidoe "  
+  ;
+}
+}
+
+
+/*media querys responsive*/
+@media screen and (max-width: 500px) {
+  body{
+    background: #0f0f0f;
+  }
+
+ .contenedor{
+  grid-template-areas:
+  "contenido contenido contenido "
+  "contenidoa contenidoa contenidoa "
+  "contenidob contenidob contenidob "
+  "contenidoc contenidoc contenidoc "
+  "contenidod contenidod contenidod "
+  "contenidoe contenidoe contenidoe "  
+  ;
+}
+}
+
+
+
+
+
+
